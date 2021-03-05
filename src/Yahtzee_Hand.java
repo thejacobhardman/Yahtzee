@@ -88,6 +88,37 @@ public class Yahtzee_Hand {
 	}
 	
 	/***********************************************************************
+	 * Method:  rollDice	                                                *
+	 * Background:  This function allows us to roll specific dice in the    *
+	 * hand.                                                                *
+	 * Purpose:  rolls specified dice in the hand				            *
+	 * Parameters:                                                          *
+	 *    d1: boolean representing whether the first die should be rolled	*
+	 *    d2: boolean representing whether the second die should be rolled	*
+	 *    d3: boolean representing whether the third die should be rolled	*
+	 *    d4: boolean representing whether the fourth die should be rolled	*
+	 *    d5: boolean representing whether the fifth die should be rolled	*
+	 * Return value:  none                                                  *
+	 ***********************************************************************/
+	public void rollDice(boolean d1, boolean d2, boolean d3, boolean d4, boolean d5) {
+		if (d1 == true) {
+			this.dice.get(0).roll();
+		}
+		if (d2 == true) {
+			this.dice.get(1).roll();
+		}
+		if (d3 == true) {
+			this.dice.get(2).roll();
+		}
+		if (d4 == true) {
+			this.dice.get(3).roll();
+		}
+		if (d5 == true) {
+			this.dice.get(4).roll();
+		}
+	}
+	
+	/***********************************************************************
 	 * Method:  toString	                                                *
 	 * Background:  This function allows us to return each current value    *
 	 * of each die in the Yahtzee hand in a one line report.                *
