@@ -64,6 +64,106 @@ public class Yahtzee_Score_Card {
 	}
 	
 	public void rollDice(boolean d1, boolean d2, boolean d3, boolean d4, boolean d5) {
+		hand.rollDice(d1, d2, d3, d4, d5);
+	}
+	
+	private void recalculateBonusScore() {
+		if (this.onesScore + this.twosScore + this.threesScore + this.foursScore + this.fivesScore + this.sixesScore >= 63) {
+			this.bonusScore = 35;
+		} else {
+			this.bonusScore = 0;
+		}
+	}
+	
+	private void recalculateTotalScore() {
+		this.totalScore = this.onesScore +
+				 this.twosScore +
+				 this.threesScore +
+				 this.foursScore +
+				 this.fivesScore +
+				 this.sixesScore +
+				 this.bonusScore +
+				 this.threeKindScore +
+				 this.fourKindScore +
+				 this.fullHouseScore +
+				 this.smallStraightScore +
+				 this.largeStraightScore +
+				 this.yahtzeeScore +
+				 this.chanceScore;
+	}
+	
+	public void scoreOnes() {
+		this.onesScore = hand.faceValue(1);
+		this.recalculateBonusScore();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreTwos() {
+		this.onesScore = hand.faceValue(2);
+		this.recalculateBonusScore();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreThrees() {
+		this.onesScore = hand.faceValue(3);
+		this.recalculateBonusScore();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreFours() {
+		this.onesScore = hand.faceValue(4);
+		this.recalculateBonusScore();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreFives() {
+		this.onesScore = hand.faceValue(5);
+		this.recalculateBonusScore();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreSixes() {
+		this.onesScore = hand.faceValue(6);
+		this.recalculateBonusScore();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreThreeKind() {
+		this.threeKindScore = hand.threeKindValue();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreFourKind() {
+		this.threeKindScore = hand.fourKindValue();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreFullHouse() {
+		this.fullHouseScore = hand.fullHouseValue();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreSmallStraight() {
+		this.smallStraightScore = hand.smallStraightValue();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreLargeStraight() {
+		this.largeStraightScore = hand.largeStraightValue();
+		this.recalculateBonusScore();
+	}
+	
+	public void scoreYahtzee() {
+		this.yahtzeeScore = hand.yahtzeeValue();
+		this.recalculateTotalScore();
+	}
+	
+	public void scoreChance() {
+		this.chanceScore = hand.chanceValue();
+		this.recalculateTotalScore();
+	}
+	
+	public void displayScoreSheet() {
 		
 	}
 }
