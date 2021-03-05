@@ -22,42 +22,60 @@
 public class Yahtzee_Score_Card {
 	
 	//null is used to denote that the score value is 'empty'
-	private Integer onesScore = null;
-	private Integer twosScore = null;
-	private Integer threesScore = null;
-	private Integer foursScore = null;
-	private Integer fivesScore = null;
-	private Integer sixesScore = null;
-	private int bonusScore = 0;
-	{
-		if (this.onesScore + this.twosScore + this.threesScore + this.foursScore + this.fivesScore + this.sixesScore >= 63) {
-			this.bonusScore = 35;
-		} else {
-			this.bonusScore = 0;
-		}
-	}
-	private Integer threeKindScore = null;
-	private Integer fourKindScore = null;
-	private Integer fullHouseScore = null;
-	private Integer smallStraightScore = null;
-	private Integer largeStraightScore = null;
-	private Integer yahtzeeScore = null;
-	private Integer chanceScore = null;
-	private int totalScore = this.onesScore +
-							 this.twosScore +
-							 this.threesScore +
-							 this.foursScore +
-							 this.fivesScore +
-							 this.sixesScore +
-							 this.bonusScore +
-							 this.threeKindScore +
-							 this.fourKindScore +
-							 this.fullHouseScore +
-							 this.smallStraightScore +
-							 this.largeStraightScore +
-							 this.yahtzeeScore +
-							 this.chanceScore;
+	private Integer onesScore;
+	private Integer twosScore;
+	private Integer threesScore;
+	private Integer foursScore;
+	private Integer fivesScore;
+	private Integer sixesScore;
+	private Integer bonusScore;
+	private Integer threeKindScore;
+	private Integer fourKindScore;
+	private Integer fullHouseScore;
+	private Integer smallStraightScore;
+	private Integer largeStraightScore;
+	private Integer yahtzeeScore;
+	private Integer chanceScore;
+	private Integer totalScore;
 	private Yahtzee_Hand hand = new Yahtzee_Hand();
+	
+	/***********************************************************************
+	 * Method:   Constructor (no parameters)                                *
+	 * Purpose:  Create a new score card			                        *
+	 * Parameters:                                                          *
+	 *    none											                    *
+	 * Return value:  no return value type                                  *
+	 ***********************************************************************/
+	public Yahtzee_Score_Card() {
+		this.onesScore = null;
+		this.twosScore = null;
+		this.threesScore = null;
+		this.foursScore = null;
+		this.fivesScore = null;
+		this.sixesScore = null;
+		this.bonusScore = 0;
+		this.threeKindScore = null;
+		this.fourKindScore = null;
+		this.fullHouseScore = null;
+		this.smallStraightScore = null;
+		this.largeStraightScore = null;
+		this.yahtzeeScore = null;
+		this.chanceScore = null;
+		this.totalScore = this.onesScore +
+				 		  this.twosScore +
+				 		  this.threesScore +
+				 		  this.foursScore +
+				 		  this.fivesScore +
+				 		  this.sixesScore +
+				 		  this.bonusScore +
+				 		  this.threeKindScore +
+				 		  this.fourKindScore +
+				 		  this.fullHouseScore +
+				 		  this.smallStraightScore +
+				 		  this.largeStraightScore +
+				 		  this.yahtzeeScore +
+				 		  this.chanceScore;
+	}
 	
 	/***********************************************************************
 	 * Method:  rollDice	                                                *
