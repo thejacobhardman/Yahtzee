@@ -1,11 +1,11 @@
 /*******************************************************************************
-*                      Assignment 5 -- Yahtzee Hand Object                     *
+*                      Assignment 6 -- Yahtzee Solo Game                       *
 *                                                                              *
 * PROGRAMMER:        Jacob Hardman hard7293@bears.unco.edu                     *
 * CLASS:             CS200 – Object Oriented Programming                       *
 * INSTRUCTOR:        Dean Zeller                                               *
 * TERM:              Spring 2021                                               *
-* SUBMISSION DATE:   2/26/2021	                                               *
+* SUBMISSION DATE:   3/5/2021	                                               *
 *                                                                              *
 * DESCRIPTION                                                                  *
 * This file implements the functionality of a single die.		               *
