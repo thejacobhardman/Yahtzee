@@ -1,3 +1,5 @@
+import java.text.MessageFormat;
+
 /*******************************************************************************
 *                      Assignment 6 -- Yahtzee Solo Game                       *
 *                                                                              *
@@ -346,21 +348,21 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                   *
 	 ************************************************************************/
 	public void displayScoreSheet() {
-		System.out.println("\nCurrent Scoresheet:");
-		System.out.format("\n1.  Ones: %15s %n", ((this.onesScore != -1) ? this.onesScore : ""));
-		System.out.format("2.  Twos: %15s %n", ((this.twosScore != -1) ? this.twosScore : ""));
-		System.out.format("3.  Threes: %15s %n", ((this.threesScore != -1) ? this.threesScore : ""));
-		System.out.format("4.  Fours: %15s %n", ((this.foursScore != -1) ? this.foursScore : ""));
-		System.out.format("5.  Fives: %15s %n", ((this.fivesScore != -1) ? this.fivesScore : ""));
-		System.out.format("6.  Sixes: %15s %n", ((this.sixesScore != -1) ? this.sixesScore : ""));
-		System.out.format("BONUS: %15s %n", this.bonusScore);
-		System.out.format("7.  3-Kind:        %2s %n", ((this.threeKindScore != -1) ? this.threeKindScore : ""));
-		System.out.format("8.  4-Kind:        %2s %n", ((this.fourKindScore != -1) ? this.fourKindScore : ""));
-		System.out.format("9.  Full House:        %2s %n", ((this.fullHouseScore != -1) ? this.fullHouseScore : ""));
-		System.out.format("10. Small Straight:        %2s %n", ((this.smallStraightScore != -1) ? this.smallStraightScore : ""));
-		System.out.format("11. Large Straight:        %2s %n", ((this.largeStraightScore != -1) ? this.largeStraightScore : ""));
-		System.out.format("12. Yahtzee:        %2s %n", ((this.yahtzeeScore != -1) ? this.yahtzeeScore : ""));
-		System.out.format("13. Chance:        %2s %n", ((this.chanceScore != -1) ? this.chanceScore : ""));
-		System.out.format("TOTAL:        %2s %n", this.totalScore);
+		System.out.println("\nCurrent Scoresheet:\n");
+		System.out.format("1.  Ones: %25s%n", ((this.onesScore != -1) ? this.onesScore : ""));
+		System.out.format("2.  Twos: %25s%n", ((this.twosScore != -1) ? this.twosScore : ""));
+		System.out.format("3.  Threes: %23s%n", ((this.threesScore != -1) ? this.threesScore : ""));
+		System.out.format("4.  Fours: %24s%n", ((this.foursScore != -1) ? this.foursScore : ""));
+		System.out.format("5.  Fives: %24s%n", ((this.fivesScore != -1) ? this.fivesScore : ""));
+		System.out.format("6.  Sixes: %24s%n", ((this.sixesScore != -1) ? this.sixesScore : ""));
+		System.out.format("BONUS: %28s%n", this.bonusScore);
+		System.out.format("7.  3-Kind: %22s%n", ((this.threeKindScore != -1) ? this.threeKindScore : ""));
+		System.out.format("8.  4-Kind: %22s%n", ((this.fourKindScore != -1) ? this.fourKindScore : ""));
+		System.out.format("9.  Full House: %19s%n", ((this.fullHouseScore != -1) ? this.fullHouseScore : ""));
+		System.out.format("10. Small Straight: %15s%n", ((this.smallStraightScore != -1) ? this.smallStraightScore : ""));
+		System.out.format("11. Large Straight: %15s%n", ((this.largeStraightScore != -1) ? this.largeStraightScore : ""));
+		System.out.format("12. Yahtzee: %22s%n", ((this.yahtzeeScore != -1) ? this.yahtzeeScore : ""));
+		System.out.format("13. Chance: %23s%n", ((this.chanceScore != -1) ? this.chanceScore : ""));
+		System.out.format("TOTAL: %28s%n", this.totalScore);
 	}
 }
