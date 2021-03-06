@@ -22,22 +22,22 @@
 public class Yahtzee_Score_Card {
 	
 	//null is used to denote that the score value is 'empty'
-	private Integer onesScore;
-	private Integer twosScore;
-	private Integer threesScore;
-	private Integer foursScore;
-	private Integer fivesScore;
-	private Integer sixesScore;
-	private Integer bonusScore;
-	private Integer threeKindScore;
-	private Integer fourKindScore;
-	private Integer fullHouseScore;
-	private Integer smallStraightScore;
-	private Integer largeStraightScore;
-	private Integer yahtzeeScore;
-	private Integer chanceScore;
-	private Integer totalScore;
-	private Yahtzee_Hand hand = new Yahtzee_Hand();
+	public Integer onesScore;
+	public Integer twosScore;
+	public Integer threesScore;
+	public Integer foursScore;
+	public Integer fivesScore;
+	public Integer sixesScore;
+	public Integer bonusScore;
+	public Integer threeKindScore;
+	public Integer fourKindScore;
+	public Integer fullHouseScore;
+	public Integer smallStraightScore;
+	public Integer largeStraightScore;
+	public Integer yahtzeeScore;
+	public Integer chanceScore;
+	public Integer totalScore;
+	public Yahtzee_Hand hand = new Yahtzee_Hand();
 	
 	/***********************************************************************
 	 * Method:   Constructor (no parameters)                                *
@@ -47,20 +47,20 @@ public class Yahtzee_Score_Card {
 	 * Return value:  no return value type                                  *
 	 ***********************************************************************/
 	public Yahtzee_Score_Card() {
-		this.onesScore = null;
-		this.twosScore = null;
-		this.threesScore = null;
-		this.foursScore = null;
-		this.fivesScore = null;
-		this.sixesScore = null;
+		this.onesScore = -1;
+		this.twosScore = -1;
+		this.threesScore = -1;
+		this.foursScore = -1;
+		this.fivesScore = -1;
+		this.sixesScore = -1;
 		this.bonusScore = 0;
-		this.threeKindScore = null;
-		this.fourKindScore = null;
-		this.fullHouseScore = null;
-		this.smallStraightScore = null;
-		this.largeStraightScore = null;
-		this.yahtzeeScore = null;
-		this.chanceScore = null;
+		this.threeKindScore = -1;
+		this.fourKindScore = -1;
+		this.fullHouseScore = -1;
+		this.smallStraightScore = -1;
+		this.largeStraightScore = -1;
+		this.yahtzeeScore = -1;
+		this.chanceScore = -1;
 		this.totalScore = this.onesScore +
 				 		  this.twosScore +
 				 		  this.threesScore +
