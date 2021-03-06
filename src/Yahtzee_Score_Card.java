@@ -359,20 +359,20 @@ public class Yahtzee_Score_Card {
 	 ************************************************************************/
 	public void displayScoreSheet() {
 		System.out.println("\nCurrent Scoresheet:");
-		System.out.format("\n1.  Ones:        %2d %n", this.onesScore);
-		System.out.format("2.  Twos:        %2d %n", this.twosScore);
-		System.out.format("3.  Threes:        %2d %n", this.threesScore);
-		System.out.format("4.  Fours:        %2d %n", this.foursScore);
-		System.out.format("5.  Fives:        %2d %n", this.fivesScore);
-		System.out.format("6.  Sixes:        %2d %n", this.sixesScore);
-		System.out.format("BONUS:        %2d %n", this.bonusScore);
-		System.out.format("7.  3-Kind:        %2d %n", this.threeKindScore);
-		System.out.format("8.  4-Kind:        %2d %n", this.fourKindScore);
-		System.out.format("9.  Full House:        %2d %n", this.fullHouseScore);
-		System.out.format("10. Small Straight:        %2d %n", this.smallStraightScore);
-		System.out.format("11. Large Straight:        %2d %n", this.largeStraightScore);
-		System.out.format("12. Yahtzee:        %2d %n", this.yahtzeeScore);
-		System.out.format("13. Chance:        %2d %n", this.chanceScore);
-		System.out.format("TOTAL:        %2d %n", this.totalScore);
+		System.out.format("\n1.  Ones:        %2s %n", ((this.onesScore != -1) ? this.onesScore : ""));
+		System.out.format("2.  Twos:        %2s %n", ((this.twosScore != -1) ? this.twosScore : ""));
+		System.out.format("3.  Threes:        %2s %n", ((this.threesScore != -1) ? this.threesScore : ""));
+		System.out.format("4.  Fours:        %2s %n", ((this.foursScore != -1) ? this.foursScore : ""));
+		System.out.format("5.  Fives:        %2s %n", ((this.fivesScore != -1) ? this.fivesScore : ""));
+		System.out.format("6.  Sixes:        %2s %n", ((this.sixesScore != -1) ? this.sixesScore : ""));
+		System.out.format("BONUS:        %2s %n", this.bonusScore);
+		System.out.format("7.  3-Kind:        %2s %n", ((this.threeKindScore != -1) ? this.threeKindScore : ""));
+		System.out.format("8.  4-Kind:        %2s %n", ((this.fourKindScore != -1) ? this.fourKindScore : ""));
+		System.out.format("9.  Full House:        %2s %n", ((this.fullHouseScore != -1) ? this.fullHouseScore : ""));
+		System.out.format("10. Small Straight:        %2s %n", ((this.smallStraightScore != -1) ? this.smallStraightScore : ""));
+		System.out.format("11. Large Straight:        %2s %n", ((this.largeStraightScore != -1) ? this.largeStraightScore : ""));
+		System.out.format("12. Yahtzee:        %2s %n", ((this.yahtzeeScore != -1) ? this.yahtzeeScore : ""));
+		System.out.format("13. Chance:        %2s %n", ((this.chanceScore != -1) ? this.chanceScore : ""));
+		System.out.format("TOTAL:        %2s %n", this.totalScore);
 	}
 }
