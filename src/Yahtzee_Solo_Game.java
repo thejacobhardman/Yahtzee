@@ -35,23 +35,25 @@ public class Yahtzee_Solo_Game {
 			
 			for (int i = 1; i < 14; i++) {
 				System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-				Boolean d1 = false, d2 = false, d3 = false, d4 = false, d5 = false;
+				boolean d1 = false, d2 = false, d3 = false, d4 = false, d5 = false;
 				System.out.println(MessageFormat.format("Turn {0} of 13", i));
 				
 				scoreCard.displayScoreSheet();
 				scoreCard.rollDice();
 				
-				System.out.print("\nDice Throw #1: ");
-				System.out.print(scoreCard.hand.toString());
-				
-				for (int j = 0; j < 3; j++) {
+				for (int j = 0; j < 3; j++) {		
+					System.out.print(MessageFormat.format("\nDice Throw {0}: ", j + 1));
+					System.out.print(scoreCard.hand.toString());
+					
 					boolean validInput = false;
 					while (!validInput) {
+						diceNums.clear();
+						String dice = "";
 						validInput = true;
-						System.out.println("\nDice to throw (enter 0 to keep roll): ");
-						String dice = input.nextLine();
-						
-						String[] diceArray = dice.split(" ");
+						System.out.print("\nDice to re-roll (enter 0 to keep roll): ");
+						dice = input.nextLine();
+						dice = dice.replaceAll("\\s","");
+						String[] diceArray = dice.split("");
 						
 						try {
 							for (int k = 0; k < diceArray.length; k++) {
@@ -60,6 +62,7 @@ public class Yahtzee_Solo_Game {
 						} catch(Exception e) {
 							System.out.println("Please enter a valid input.");
 							validInput = false;
+							input.nextLine();
 						}
 						
 						if (validInput) {
@@ -67,11 +70,18 @@ public class Yahtzee_Solo_Game {
 								if (diceNums.get(k) > 5 || diceNums.get(k) < 0) {
 									System.out.println("Please enter a valid input.");
 									validInput = false;
+									input.nextLine();
 									break;
 								}
 							}
 						}
 					}
+					
+					d1 = false; 
+					d2 = false; 
+					d3 = false; 
+					d4 = false; 
+					d5 = false;
 					
 					for (int k = 0; k < diceNums.size(); k++) {
 						switch (diceNums.get(k)) {
@@ -95,6 +105,7 @@ public class Yahtzee_Solo_Game {
 								break;
 							default:
 								System.out.println("Invalid input.");
+								input.nextLine();
 								break;
 						}
 					}
@@ -106,11 +117,14 @@ public class Yahtzee_Solo_Game {
 					}
 				}
 				
+				System.out.print("\nCurrent Dice Value: ");
+				System.out.print(scoreCard.hand.toString());
+				
 				int rowToUse = 0;
 				boolean validInput = false;
 				while (!validInput) {
 					validInput = true;
-					System.out.print("Use in Row: ");
+					System.out.print("\nUse in Row: ");
 					String row = input.next();
 					
 					try {
@@ -132,7 +146,7 @@ public class Yahtzee_Solo_Game {
 						case 1:
 							if (scoreCard.onesScore == -1) {
 								scoreCard.scoreOnes();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.onesScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(1), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -142,7 +156,7 @@ public class Yahtzee_Solo_Game {
 						case 2:
 							if (scoreCard.twosScore == -1) {
 								scoreCard.scoreTwos();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.twosScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(2), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -152,7 +166,7 @@ public class Yahtzee_Solo_Game {
 						case 3:
 							if (scoreCard.threesScore == -1) {
 								scoreCard.scoreThrees();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.threesScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(3), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -162,7 +176,7 @@ public class Yahtzee_Solo_Game {
 						case 4:
 							if (scoreCard.foursScore == -1) {
 								scoreCard.scoreFours();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.foursScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(4), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -172,7 +186,7 @@ public class Yahtzee_Solo_Game {
 						case 5:
 							if (scoreCard.fivesScore == -1) {
 								scoreCard.scoreFives();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.fivesScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(5), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -182,7 +196,7 @@ public class Yahtzee_Solo_Game {
 						case 6:
 							if (scoreCard.sixesScore == -1) {
 								scoreCard.scoreSixes();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.sixesScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(6), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -261,7 +275,10 @@ public class Yahtzee_Solo_Game {
 							}
 						}
 					}
-				}				
+				}	
+				
+				System.out.println("Press any key to continue.");
+				input.nextLine();
 			}
 			
 			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
