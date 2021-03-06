@@ -356,8 +356,8 @@ public class Yahtzee_Score_Card {
 		System.out.format("5.  Fives: %24s%n", ((this.fivesScore != -1) ? this.fivesScore : ""));
 		System.out.format("6.  Sixes: %24s%n", ((this.sixesScore != -1) ? this.sixesScore : ""));
 		System.out.format("BONUS: %28s%n", this.bonusScore);
-		System.out.format("7.  3-Kind: %22s%n", ((this.threeKindScore != -1) ? this.threeKindScore : ""));
-		System.out.format("8.  4-Kind: %22s%n", ((this.fourKindScore != -1) ? this.fourKindScore : ""));
+		System.out.format("7.  3-Kind: %23s%n", ((this.threeKindScore != -1) ? this.threeKindScore : ""));
+		System.out.format("8.  4-Kind: %23s%n", ((this.fourKindScore != -1) ? this.fourKindScore : ""));
 		System.out.format("9.  Full House: %19s%n", ((this.fullHouseScore != -1) ? this.fullHouseScore : ""));
 		System.out.format("10. Small Straight: %15s%n", ((this.smallStraightScore != -1) ? this.smallStraightScore : ""));
 		System.out.format("11. Large Straight: %15s%n", ((this.largeStraightScore != -1) ? this.largeStraightScore : ""));
