@@ -1,5 +1,3 @@
-import java.text.MessageFormat;
-
 /*******************************************************************************
 *                      Assignment 6 -- Yahtzee Solo Game                       *
 *                                                                              *
