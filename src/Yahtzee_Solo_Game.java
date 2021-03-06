@@ -146,7 +146,7 @@ public class Yahtzee_Solo_Game {
 						case 1:
 							if (scoreCard.onesScore == -1) {
 								scoreCard.scoreOnes();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(1), rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.hand.faceValue(1), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -156,7 +156,7 @@ public class Yahtzee_Solo_Game {
 						case 2:
 							if (scoreCard.twosScore == -1) {
 								scoreCard.scoreTwos();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(2), rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.hand.faceValue(2), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -166,7 +166,7 @@ public class Yahtzee_Solo_Game {
 						case 3:
 							if (scoreCard.threesScore == -1) {
 								scoreCard.scoreThrees();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(3), rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.hand.faceValue(3), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -176,7 +176,7 @@ public class Yahtzee_Solo_Game {
 						case 4:
 							if (scoreCard.foursScore == -1) {
 								scoreCard.scoreFours();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(4), rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.hand.faceValue(4), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -186,7 +186,7 @@ public class Yahtzee_Solo_Game {
 						case 5:
 							if (scoreCard.fivesScore == -1) {
 								scoreCard.scoreFives();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(5), rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.hand.faceValue(5), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -196,7 +196,7 @@ public class Yahtzee_Solo_Game {
 						case 6:
 							if (scoreCard.sixesScore == -1) {
 								scoreCard.scoreSixes();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.hand.faceValue(6), rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.hand.faceValue(6), rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -206,7 +206,7 @@ public class Yahtzee_Solo_Game {
 						case 7:
 							if (scoreCard.threeKindScore == -1) {
 								scoreCard.scoreThreeKind();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.threeKindScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.threeKindScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -216,7 +216,7 @@ public class Yahtzee_Solo_Game {
 						case 8:
 							if (scoreCard.fourKindScore == -1) {
 								scoreCard.scoreFourKind();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.fourKindScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.fourKindScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -226,7 +226,7 @@ public class Yahtzee_Solo_Game {
 						case 9:
 							if (scoreCard.fullHouseScore == -1) {
 								scoreCard.scoreFullHouse();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.fullHouseScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.fullHouseScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -236,7 +236,7 @@ public class Yahtzee_Solo_Game {
 						case 10:
 							if (scoreCard.smallStraightScore == -1) {
 								scoreCard.scoreSmallStraight();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.smallStraightScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.smallStraightScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -246,7 +246,7 @@ public class Yahtzee_Solo_Game {
 						case 11:
 							if (scoreCard.largeStraightScore == -1) {
 								scoreCard.scoreLargeStraight();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.largeStraightScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.largeStraightScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -256,7 +256,7 @@ public class Yahtzee_Solo_Game {
 						case 12:
 							if (scoreCard.yahtzeeScore == -1) {
 								scoreCard.scoreYahtzee();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.yahtzeeScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.yahtzeeScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -266,7 +266,7 @@ public class Yahtzee_Solo_Game {
 						case 13:
 							if (scoreCard.chanceScore == -1) {
 								scoreCard.scoreChance();
-								System.out.println(MessageFormat.format("Score of {0} saven in row {1}.", scoreCard.chanceScore, rowToUse));
+								System.out.println(MessageFormat.format("Score of {0} saved in row {1}.", scoreCard.chanceScore, rowToUse));
 								break;
 							} else {
 								System.out.println("That row has already been used.");
@@ -276,8 +276,6 @@ public class Yahtzee_Solo_Game {
 						}
 					}
 				}	
-				
-				System.out.println("Press any key to continue.");
 				input.nextLine();
 			}
 			
@@ -290,9 +288,9 @@ public class Yahtzee_Solo_Game {
 				System.out.print("\nWould you like to play again? (Y/N): ");
 				String choice = input.next();
 				
-				if (choice.toUpperCase() == "Y") {
+				if (choice.toUpperCase().equals("Y")) {
 					userConfirm = true;
-				} else if (choice.toUpperCase() == "N") {
+				} else if (choice.toUpperCase().equals("N")) {
 					userConfirm = true;
 					isRunning = false;
 				} else {
