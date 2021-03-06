@@ -12,7 +12,21 @@
 * of Yahtzee.                                                                  *
 *                                                                              *
 * ATTRIBUTES:                                                                  *
-*         dice: an ArrayList that holds each individual die in the hand.       *
+*         onesScore:												           *
+*         twosScore:														   *
+*         threesScore:														   *
+*         foursScore:														   *
+*         fivesScore:											               *
+*         sixesScore:														   *
+*         bonusScore:														   *
+*         threeKindScore:													   *
+*         fourKindScore:													   *
+*         fullHouseScore:													   *
+*         smallStraightScore:												   *
+*         largeStraightScore:												   *
+*         yahtzeeScore:														   *
+*         chanceScore: 														   *
+*         totalScore:                                                          *
 *                                                                              *
 * COPYRIGHT:                                                                   *
 * This program is copyright (c)2021 Dean Zeller and Jacob Hardman.             *
@@ -21,7 +35,6 @@
 
 public class Yahtzee_Score_Card {
 	
-	//null is used to denote that the score value is 'empty'
 	public Integer onesScore;
 	public Integer twosScore;
 	public Integer threesScore;

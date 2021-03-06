@@ -8,11 +8,10 @@
 * SUBMISSION DATE:   3/5/2021	                                               *
 *                                                                              *
 * DESCRIPTION                                                                  *
-* This file implements the functionality of a score card used in the game      *
-* of Yahtzee.                                                                  *
+* This file implements the game of Yahtzee.                                    *
 *                                                                              *
 * ATTRIBUTES:                                                                  *
-*         dice: an ArrayList that holds each individual die in the hand.       *
+*         none															       *
 *                                                                              *
 * COPYRIGHT:                                                                   *
 * This program is copyright (c)2021 Dean Zeller and Jacob Hardman.             *
