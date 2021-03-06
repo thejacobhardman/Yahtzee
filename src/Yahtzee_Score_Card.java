@@ -165,7 +165,7 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                  *
 	 ***********************************************************************/
 	public void scoreTwos() {
-		this.onesScore = hand.faceValue(2);
+		this.twosScore = hand.faceValue(2);
 		this.recalculateBonusScore();
 		this.recalculateTotalScore();
 	}
@@ -180,7 +180,7 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                  *
 	 ***********************************************************************/
 	public void scoreThrees() {
-		this.onesScore = hand.faceValue(3);
+		this.threesScore = hand.faceValue(3);
 		this.recalculateBonusScore();
 		this.recalculateTotalScore();
 	}
@@ -195,7 +195,7 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                   *
 	 ***********************************************************************/
 	public void scoreFours() {
-		this.onesScore = hand.faceValue(4);
+		this.foursScore = hand.faceValue(4);
 		this.recalculateBonusScore();
 		this.recalculateTotalScore();
 	}
@@ -210,7 +210,7 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                   *
 	 ***********************************************************************/
 	public void scoreFives() {
-		this.onesScore = hand.faceValue(5);
+		this.fivesScore = hand.faceValue(5);
 		this.recalculateBonusScore();
 		this.recalculateTotalScore();
 	}
@@ -225,7 +225,7 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                   *
 	 ***********************************************************************/
 	public void scoreSixes() {
-		this.onesScore = hand.faceValue(6);
+		this.sixesScore = hand.faceValue(6);
 		this.recalculateBonusScore();
 		this.recalculateTotalScore();
 	}
@@ -256,7 +256,7 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                   *
 	 ************************************************************************/
 	public void scoreFourKind() {
-		this.threeKindScore = hand.fourKindValue();
+		this.fourKindScore = hand.fourKindValue();
 		this.recalculateTotalScore();
 	}
 	
@@ -347,13 +347,13 @@ public class Yahtzee_Score_Card {
 	 ************************************************************************/
 	public void displayScoreSheet() {
 		System.out.println("\nCurrent Scoresheet:");
-		System.out.format("\n1.  Ones:        %2s %n", ((this.onesScore != -1) ? this.onesScore : ""));
-		System.out.format("2.  Twos:        %2s %n", ((this.twosScore != -1) ? this.twosScore : ""));
-		System.out.format("3.  Threes:        %2s %n", ((this.threesScore != -1) ? this.threesScore : ""));
-		System.out.format("4.  Fours:        %2s %n", ((this.foursScore != -1) ? this.foursScore : ""));
-		System.out.format("5.  Fives:        %2s %n", ((this.fivesScore != -1) ? this.fivesScore : ""));
-		System.out.format("6.  Sixes:        %2s %n", ((this.sixesScore != -1) ? this.sixesScore : ""));
-		System.out.format("BONUS:        %2s %n", this.bonusScore);
+		System.out.format("\n1.  Ones: %15s %n", ((this.onesScore != -1) ? this.onesScore : ""));
+		System.out.format("2.  Twos: %15s %n", ((this.twosScore != -1) ? this.twosScore : ""));
+		System.out.format("3.  Threes: %15s %n", ((this.threesScore != -1) ? this.threesScore : ""));
+		System.out.format("4.  Fours: %15s %n", ((this.foursScore != -1) ? this.foursScore : ""));
+		System.out.format("5.  Fives: %15s %n", ((this.fivesScore != -1) ? this.fivesScore : ""));
+		System.out.format("6.  Sixes: %15s %n", ((this.sixesScore != -1) ? this.sixesScore : ""));
+		System.out.format("BONUS: %15s %n", this.bonusScore);
 		System.out.format("7.  3-Kind:        %2s %n", ((this.threeKindScore != -1) ? this.threeKindScore : ""));
 		System.out.format("8.  4-Kind:        %2s %n", ((this.fourKindScore != -1) ? this.fourKindScore : ""));
 		System.out.format("9.  Full House:        %2s %n", ((this.fullHouseScore != -1) ? this.fullHouseScore : ""));
