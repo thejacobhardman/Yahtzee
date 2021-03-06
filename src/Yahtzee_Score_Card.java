@@ -61,20 +61,7 @@ public class Yahtzee_Score_Card {
 		this.largeStraightScore = -1;
 		this.yahtzeeScore = -1;
 		this.chanceScore = -1;
-		this.totalScore = this.onesScore +
-				 		  this.twosScore +
-				 		  this.threesScore +
-				 		  this.foursScore +
-				 		  this.fivesScore +
-				 		  this.sixesScore +
-				 		  this.bonusScore +
-				 		  this.threeKindScore +
-				 		  this.fourKindScore +
-				 		  this.fullHouseScore +
-				 		  this.smallStraightScore +
-				 		  this.largeStraightScore +
-				 		  this.yahtzeeScore +
-				 		  this.chanceScore;
+		this.totalScore = 0;
 	}
 	
 	/***********************************************************************
@@ -136,20 +123,21 @@ public class Yahtzee_Score_Card {
 	 * Return value:  none                                                  *
 	 ***********************************************************************/
 	private void recalculateTotalScore() {
-		this.totalScore = this.onesScore +
-				 this.twosScore +
-				 this.threesScore +
-				 this.foursScore +
-				 this.fivesScore +
-				 this.sixesScore +
-				 this.bonusScore +
-				 this.threeKindScore +
-				 this.fourKindScore +
-				 this.fullHouseScore +
-				 this.smallStraightScore +
-				 this.largeStraightScore +
-				 this.yahtzeeScore +
-				 this.chanceScore;
+		this.totalScore = 0;
+		
+		if (this.onesScore != -1) { this.totalScore += this.onesScore; }
+		if (this.twosScore != -1) { this.totalScore += this.twosScore; }
+		if (this.threesScore != -1) { this.totalScore += this.threesScore; }
+		if (this.foursScore != -1) { this.totalScore += this.foursScore; }
+		if (this.fivesScore != -1) { this.totalScore += this.fivesScore; }
+		if (this.sixesScore != -1) { this.totalScore += this.sixesScore; }
+		if (this.threeKindScore != -1) { this.totalScore += this.threeKindScore; }
+		if (this.fourKindScore != -1) { this.totalScore += this.fourKindScore; }
+		if (this.fullHouseScore != -1) { this.totalScore += this.fullHouseScore; }
+		if (this.smallStraightScore != -1) { this.totalScore += this.smallStraightScore; }
+		if (this.largeStraightScore != -1) { this.totalScore += this.largeStraightScore; }
+		if (this.yahtzeeScore != -1) { this.totalScore += this.yahtzeeScore; }
+		if (this.chanceScore != -1) { this.totalScore += this.chanceScore; }
 	}
 	
 	/***********************************************************************
